@@ -1,0 +1,129 @@
+#CODE 1
+
+def reverse_string(s):
+
+return.join(reversed(s))
+
+def main():
+
+input_string = "Hello, world!"
+
+reversed_string = reverse_string(input_string)
+
+print (f"Reversed string: (reversed_string}")
+
+if name == "__main___":
+
+main()
+
+***Issue: In the reverse_string function, the use of the += operator to concatenate strings inside a loop is inefficient and can lead to poor performance for large strings. Strings are immutable in Python, so every time a concatenation operation happens, a new string object is created!!!
+
+'Solution: Use the join() method, which is more efficient for concatenating strings within a loop. 
+
+
+
+#CODE 2
+
+def get_age():
+
+age = input("Please enter your age: ")
+
+if age.isnumeric() and int (age) >= 18:
+
+return int(age)
+
+else:
+
+return None
+
+def main():
+
+age = get_age()
+
+if age:
+
+print("You are (age) years old and eligible.")
+
+else:
+
+print("Invalid input. You must be at least 18 years old.")
+
+if name "__main__":
+
+I main()
+
+***Issue: The age variable returned from input() is a string. The comparison age >= 18 attempts to compare a string with an integer, leadin
+
+Solution: Convert the input age to an integer for the comparison.!!!
+
+
+#CODE3
+
+def read_and_write_file(filename):
+
+try:
+
+with open(filename, 'r') as file:
+
+content file.read()
+
+with open(filename, 'w') as file:
+
+file.write(content.upper())
+
+print("File (filename) processed successfully.")
+
+except Exception as e:
+
+print("An error occurred: {str(e)}")
+
+def main():
+
+filename="sample.txt"
+
+read_and_write_file(filename)
+
+if name __main__":
+
+main()
+
+'Issue: When reading and writing to the same file, the content is read and then immediately overwritten. This means the original content
+
+Solution: Store the content in a separate variable before writing it back.***
+
+
+#Code4
+
+
+def merge sort(arr):
+
+len(arr) < 1:
+return arr
+mid= len(arr) // 2
+
+left = arr[:mid]
+
+right = arr[mid:]
+merge_sort(left)
+merge_sort(right)
+while i < len(left) and j < len(right):
+
+if left[i] < right[1]:
+
+arr[k] = left[i]
+else:
+arr[k] = right[1]
+while i < len(left):
+arr[k] = left[i]
+while j< len(right):
+arr[k] = right[j]
+return arr
+arr= [38, 27, 43, 3, 9, 82, 18]
+
+sorted_arr= merge_sort (arr.copy()) # Copy the original array to keep it intact
+
+print("The sorted array is: (sorted_arr}")
+
+
+***Issue: The merge_sort function does not return the sorted array, but the sorting operation is done in place
+Solution: Modify the function to return the sorted array.
